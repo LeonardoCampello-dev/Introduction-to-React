@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 
-function Square(props) {
+function Square({ value, onClick }) {
     return (
-        <button className="square" onClick={props.onClick}>
-            {props.value}
+        <button className="square" onClick={onClick}>
+            {value}
         </button>
     );
 }
@@ -62,14 +62,15 @@ class Game extends React.Component {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = current.squares.slice();
-        if (calculateWinner(squares) || squares[i]) {
-            return;
-        }
+
+        if (calculateWinner(squares) || squares[i]) return
+
         squares[i] = this.state.xIsNext ? "X" : "O";
+
         this.setState({
             history: history.concat([
                 {
-                    squares: squares
+                    squares
                 }
             ]),
             stepNumber: history.length,
@@ -93,6 +94,7 @@ class Game extends React.Component {
             const desc = move ?
                 'Go to move #' + move :
                 'Go to game start';
+
             return (
                 <li key={move}>
                     <button onClick={() => this.jumpTo(move)}>{desc}</button>
@@ -101,6 +103,7 @@ class Game extends React.Component {
         });
 
         let status;
+
         if (winner) {
             status = "Winner: " + winner;
         } else {
