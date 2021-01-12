@@ -2,12 +2,12 @@
     <img 
         src="./.github/demo.png"
         width="250"
-        alt="hash"
+        alt="tic-tac-toe"
     >
 </h1>
 
 <h1 align="center">
-    <a href="https://hash.vercel.app/">Jogo da velha 🧓🏻</a>
+    <a href="https://hash.vercel.app/">Jogo da velha 👵🏻</a>
 </h1>
 
 <h4 align="center">
