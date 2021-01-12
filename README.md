@@ -1,7 +1,7 @@
 <h1 align="center">
     <img 
         src="./.github/demo.png"
-        width="400"
+        width="250"
         alt="hash"
     >
 </h1>
