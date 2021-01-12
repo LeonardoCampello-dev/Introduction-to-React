@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 * {
     margin: 0;
@@ -21,17 +20,18 @@ html, body {
     min-height: 100vh;
 }
 
-body,
-button {
-    font-family: 'Press Start 2P', cursive;
-} 
-
 body {
     display: flex;
     align-items: center;
     justify-content: center;
 
     background-color: #edf1ed18;
+
+    font-family: 'Press Start 2P', cursive;
+}
+
+button {
+    font-family: 'Jetbrains Mono', cursive;
 }
 
 .game .status {
@@ -62,7 +62,7 @@ body {
 .game-board .board-row .square {
     color: #fe35fe;
     background-color: #fefefe;
-    border: 2px solid #94FE00;
+    border: .2rem solid #94FE00;
 
     width: 9.6rem;
     height: 9.6rem;
@@ -82,7 +82,15 @@ body {
     
     text-align: center;
 
-    margin-top: 1.6rem;
+    margin-top: .8rem;
+}
+
+.game-info ol li button {
+    background-color: #161616;
+    color: #fefefe;
+    
+    padding: .8rem 1.6rem;
+    border-radius: .4rem;
 }
 
 @media (max-width: 555px) {
